@@ -1,3 +1,11 @@
+/* CSS Reset */
+* {
+    Margin: 0;
+    Padding: 0;
+    Box-sizing: border-box;
+}
+
+
 /* Generics */
 img {
     max-width: 100%;
@@ -9,6 +17,16 @@ ul {
     margin: 0;
 }
 
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
 /* Utils */
 
 .bg-color-white {
@@ -16,7 +34,7 @@ ul {
 }
 
 .bg-color-lightgrey {
-    background-color: rgb(229, 229, 229);
+    background-color: rgb(248, 249, 250);
 }
 
 .bg-color-dark {
@@ -24,9 +42,23 @@ ul {
 }
 
 .bg-color-blue {
-    background-color: rgb(56, 112, 224);
+    background-color: rgb(15, 82, 252);
 }
 
+.text-bg-blue {
+    color: white;
+    background-color: rgb(44, 90, 180);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.my-rounded-pill {
+    border-radius: 50%;
+}
+
+.container-table {
+    padding: 0 1.5rem;
+}
 
 /* Header */
 header {
@@ -43,7 +75,12 @@ header .container-fluid {
 }
 
 .mobile-logo {
-    width: 50px;
+    width: 40px;
+    height: auto;
+}
+
+.desktop-logo {
+    width: 120px;
     height: auto;
 }
 
@@ -83,7 +120,15 @@ main .fa-solid {
 
 /*todo Sidebar */
 .sidebar {
-    flex-basis: 75px;
+    flex-basis: 70px;
+    flex-shrink: 0;
+    background-image: url(../html-css-bootstrap-dashboard/bootstrap_dashboard/img/sidebar-bg.png);
+}
+
+.sidebar a {
+    color: white;
+    font-weight: 500;
+    padding: 0 0.2rem;
 }
 
 /*todo Sidebar-Top */
@@ -91,17 +136,78 @@ main .fa-solid {
     flex-grow: 1;
 }
 
+.sidebar .fa-solid {
+    font-size: 1.5rem;
+}
+
 .sidebar-top ul li {
-    padding: 5px 0;
+    padding: 10px 0;
 }
 
 /*todo Sidebar-Bottom */
-.sidebar-bottom {
-    height: 60px;
+.sidebar-bottom ul li {
+    height: 50px;
 }
 
 /*todo Content */
-.content-nav {
+.content {
     flex-grow: 1;
-    height: 100px;
+    overflow: auto;
+}
+
+.content-nav ul li:not(:last-of-type) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.fa-square-plus {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.fa-plus {
+    width: 10px;
+    height: 10px;
+}
+
+/*todo Offcanvas */
+.offcanvas.offcanvas-end {
+    width: 100%;
+}
+
+.offcanvas label {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/*todo Table */
+.tag-image {
+    width: 30px;
+    filter: contrast(1.5);
+}
+
+.fa-solid.fa-pen,
+.fa-solid.fa-trash {
+    color: gray;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 10px
+}
+
+table a {
+    color: black;
+}
+
+th a {
+    vertical-align: middle;
+    margin-left: 0.5rem;
+}
+
+
+/*todo Faq */
+.accordion-body p {
+    font-weight: 500;
 }

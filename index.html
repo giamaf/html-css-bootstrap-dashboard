@@ -21,22 +21,26 @@
         crossorigin='anonymous' />
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
 
 
 </head>
 
 <body>
     <header class="bg-body-tertiary py-2">
-        <div class="container-fluid bg-color-white">
+        <div class="container-fluid bg-color-white h-100">
 
             <!-- Navbar -->
-            <nav class="d-flex align-items-center justify-content-between">
+            <nav class="d-flex align-items-center justify-content-between h-100">
 
                 <!-- Left -->
                 <div class="nav-left">
                     <a class="navbar-brand" href="#">
-                        <img class="mobile-logo"
+                        <img class="mobile-logo d-lg-none"
                             src="../html-css-bootstrap-dashboard/bootstrap_dashboard/img/mobile-logo.png" alt=""></a>
+                    <a href="#">
+                        <img class="desktop-logo d-none d-lg-inline-block" src="bootstrap_dashboard/img/logo.svg"
+                            alt=""></a>
                 </div>
 
                 <!-- Center -->
@@ -57,22 +61,23 @@
                         <li class="nav-item d-none d-lg-inline">
                             <a class="nav-link" href="#"><i class="fa-solid fa-circle-question"></i></a>
                         </li>
-                        <li class="nav-item dropdown d-none d-lg-inline">
+                        <li class="nav-item d-none d-lg-inline">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                        </li>
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                                <i class="fa-solid fa-bell"></i>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Attiva notifiche</a></li>
+                                <li><a class="dropdown-item" href="#">Disattiva notifiche</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#">Impostazioni notifiche</a></li>
+
                             </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-bell"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -88,37 +93,303 @@
         <nav class="d-flex flex-column sidebar bg-color-dark">
 
             <!--todo Sidebar-Top -->
-            <div class="sidebar-top text-center mt-3">
+            <div class="sidebar-top text-center py-4 d-lg-flex justify-content-center">
                 <ul>
                     <li>
                         <a href="#"><i class="fa-solid fa-house"></i></a>
-                        <a class="d-none" href="#">Home</a>
+                        <a class="d-none d-lg-inline" href="#">Home</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
-                        <a class="d-none" href="#">Stats</a>
+                        <a class="d-none d-lg-inline" href="#">Stats</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa-solid fa-signal"></i></a>
-                        <a class="d-none" href="#">Signal</a>
+                        <a class="d-none d-lg-inline" href="#">Signal</a>
                     </li>
                 </ul>
             </div>
 
             <!--todo Sidebar-Bottom -->
-            <div class="sidebar-bottom text-center">
+            <div class="sidebar-bottom text-center pb-4 d-lg-flex justify-content-center">
                 <a href="#"><i class="fa-solid fa-gear"></i></a>
+                <a class="d-none d-lg-inline" href="#">Admin</a>
             </div>
         </nav>
 
+
         <!--todo Content -->
+        <div class="content">
+
+            <!--todo Content-Navbar -->
+
+            <nav class="content-nav container-fluid bg-color-blue text-white py-4">
+                <ul class="list-inline fw-light">
+                    <li>
+                        <h5>Nuovo Studente</h5>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i
+                                class="fa-solid fa-square-plus"></i></button>
+
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci un nuovo studente</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="name mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Nome</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="surname mb-3">
+                                            <label for="exampleFormControlInput2" class="form-label">Cognome</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput2">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="exampleFormControlInput1" class="form-label">Email</label>
+                                        <div class="email input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1">@</span>
+                                            <input type="text" class="form-control" aria-label="Username"
+                                                aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="password mb-3">
+                                            <label for="exampleFormControlInput4" class="form-label">Password</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput4">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="address mb-3">
+                                            <label for="exampleFormControlInput5" class="form-label">Indirizzo</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput5">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="city mb-3">
+                                            <label for="exampleFormControlInput6" class="form-label">Città</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput6">
+                                        </div>
+                                    </div>
+                                    <div class="country col-4">
+                                        <label for="exampleFormControlInput1" class="form-label">Stato</label>
+                                        <div class="input-group mb-3">
+                                            <select class="form-select" id="inputGroupSelect01">
+                                                <option selected>Scegli...</option>
+                                                <option value="1">Italia</option>
+                                                <option value="2">Stati Uniti</option>
+                                                <option value="3">Germania</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="cap col-2">
+                                        <div class="address mb-3">
+                                            <label for="exampleFormControlInput8" class="form-label">CAP</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput8">
+                                        </div>
+                                    </div>
+                                    <div class="photo col-12">
+                                        <label for="exampleFormControlInput1" class="form-label">Foto</label>
+                                        <div class="input-group mb-3">
+                                            <label class="input-group-text" for="inputGroupSelect01">Scegli file</label>
+                                            <select class="form-select" id="inputGroupSelect01">
+                                                <option selected>Nessun file selezionato</option>
+                                                <option value="1">Sfoglia</option>
+                                                <option value="2">OneDrive</option>
+                                                <option value="3">Dropbox</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="check-to-continue mb-3">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Seleziona per proseguire
+                                        </label>
+                                    </div>
+                                    <div class="save-restore-btn">
+                                        <button type="button" class="btn btn-primary">Salva</button>
+                                        <button type="button" class="btn btn-warning">Svuota</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
 
-        <nav class="content-nav container-fluid bg-color-blue ">
-            ciao
-        </nav>
+                    </li>
+                    <li class="mb-2">
+                        <h4>Boolean</h4>
+                        <a href="#"><span class="badge rounded-pill text-bg-blue">Piano blaze</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="badge rounded-pill text-bg-blue">3 app</span></a>
+                        <i class="fa-solid fa-angles-right"></i>
+                        <a href="#"><span class="badge my-rounded-pill text-bg-blue"><i
+                                    class="fa-solid fa-plus fa-xs"></i></span></a>
+                    </li>
+                    <li>
+                        <h5>Studenti online negli ultimi 30 minuti</h5>
+                        <p class="fs-3">125</p>
+                    </li>
+                </ul>
+            </nav>
 
 
+            <!--todo Content-Main -->
+            <div class="content-main container-fluid bg-color-lightgrey py-4">
+                <div class="row gy-4">
+                    <div class="col-12 col-lg-8 order-lg-1">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Prossime Classi</h2>
+                            </div>
+                            <table class="table table-hover container-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Nome</th>
+                                        <th scope="col">Data Inizio</th>
+                                        <th scope="col">ROI</th>
+                                        <th scope="col">Stato</th>
+                                        <th scope="col">Azioni</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"><img class="tag-image"
+                                                src="../html-css-bootstrap-dashboard/bootstrap_dashboard/img/class-avatar.jpg"
+                                                alt="">
+
+                                            <a href="#">Classe 75</a>
+                                        </th>
+                                        <td><a href="#">15 Feb 2023</a></td>
+                                        <td><a href="#">20%</a></td>
+                                        <td><a href="#"><span class="badge text-bg-success">Done</span></a></td>
+                                        <td>
+                                            <a href="#"><i class="fa-solid fa-pen rounded"></i></a>
+                                            <a href="#"><i class="fa-solid fa-trash rounded"></i></a>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!--todo Faq -->
+                    <div class="col-12 order-lg-3">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 class="text-uppercase">f.a.q</h2>
+                            </div>
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Come aggiungere un nuovo studente?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>Clicca sul + in alto nella sezione blu.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            Come posso accedere alle informazioni del mio account?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>Clicca sull'icona della campanella.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            Posso usare questa dashboard da mobile?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>Di solito è inusuale utilizzare dashboard del genere da mobile, ma i
+                                                nostri sviluppatori hanno fatto di tutto per permettere un'esperienza
+                                                utente accettabile anche da dispositivi con schermi ridotti.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--todo Todo -->
+                    <div class="col-12 col-lg-4 order-lg-2">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Todo</h2>
+                            </div>
+                            <ul class="list-group p-3">
+                                <li class="list-group-item">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Kickoff nuove classi
+                                    </label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Lezione su Bootstrap 5 in classe #116
+                                    </label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input" type="checkbox" value="" checked>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Controllare username GitHub studenti
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!--todo Stats -->
+                        <div class="card mt-4">
+                            <img src="../html-css-bootstrap-dashboard/bootstrap_dashboard/img/stats.jpeg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Utenti attivi</h5>
+                                <p class="card-text">Lista degli utenti attivi in piattaforma nell'ultimo mese</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Gennaio: 1200</li>
+                                <li class="list-group-item">Febbraio: 800</li>
+                                <li class="list-group-item">Marzo: 1500</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link">Visualizza report approfondito</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
 </body>
