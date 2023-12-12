@@ -1,0 +1,56 @@
+/* Generics */
+img {
+    max-width: 100%;
+}
+
+/* Utils */
+
+.bg-color-white {
+    background-color: white;
+}
+
+.bg-color-lightgrey {
+    background-color: rgb(229, 229, 229);
+}
+
+.ps-half {
+    padding-left: 0.5rem;
+}
+
+
+/* Header */
+header .container-fluid {
+    flex-wrap: nowrap;
+}
+
+/* Header Left */
+.mobile-logo {
+    width: 50px;
+    height: auto;
+}
+
+/* Header Center */
+.nav-center {
+    flex-grow: 1;
+}
+
+form {
+    position: relative;
+}
+
+.fa-magnifying-glass {
+    position: absolute;
+    top: 11px;
+    left: 10px;
+}
+
+.form-control {
+    padding-left: 2rem;
+}
+
+/* Header Right */
+
+
+.nav-right ul {
+    list-style-type: none;
+}
