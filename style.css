@@ -3,6 +3,12 @@ img {
     max-width: 100%;
 }
 
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
 /* Utils */
 
 .bg-color-white {
@@ -13,17 +19,29 @@ img {
     background-color: rgb(229, 229, 229);
 }
 
-.ps-half {
-    padding-left: 0.5rem;
+.bg-color-dark {
+    background-color: rgb(24, 40, 61);
+}
+
+.bg-color-blue {
+    background-color: rgb(56, 112, 224);
 }
 
 
 /* Header */
+header {
+    height: 60px;
+}
+
 header .container-fluid {
     flex-wrap: nowrap;
 }
 
 /* Header Left */
+.nav-left {
+    flex-shrink: 0;
+}
+
 .mobile-logo {
     width: 50px;
     height: auto;
@@ -49,8 +67,41 @@ form {
 }
 
 /* Header Right */
+.nav-right {
+    flex-shrink: 0;
+}
 
 
-.nav-right ul {
-    list-style-type: none;
+/*todo Main */
+main {
+    height: calc(100vh - 60px);
+}
+
+main .fa-solid {
+    color: white;
+}
+
+/*todo Sidebar */
+.sidebar {
+    flex-basis: 75px;
+}
+
+/*todo Sidebar-Top */
+.sidebar-top {
+    flex-grow: 1;
+}
+
+.sidebar-top ul li {
+    padding: 5px 0;
+}
+
+/*todo Sidebar-Bottom */
+.sidebar-bottom {
+    height: 60px;
+}
+
+/*todo Content */
+.content-nav {
+    flex-grow: 1;
+    height: 100px;
 }
