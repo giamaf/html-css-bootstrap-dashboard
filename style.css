@@ -108,6 +108,9 @@ form {
     flex-shrink: 0;
 }
 
+.fa-bell {
+    color: orange;
+}
 
 /*todo Main */
 main {
@@ -155,7 +158,7 @@ main .fa-solid {
     overflow: auto;
 }
 
-.content-nav ul li:not(:last-of-type) {
+.content-nav ul li:first-of-type {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
