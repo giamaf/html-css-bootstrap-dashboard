@@ -123,7 +123,7 @@
 
             <!--todo Content-Navbar -->
 
-            <nav class="content-nav container-fluid bg-color-blue text-white py-4">
+            <nav class="content-nav bg-color-blue text-white p-4">
                 <ul class="list-inline fw-light d-lg-flex justify-content-between align-items-baseline">
                     <li class="order-lg-3 mb-lg-0">
                         <h5>Nuovo Studente</h5>
@@ -222,14 +222,20 @@
                         </div>
                     </li>
                     <li class="mb-2 order-lg-1 mb-lg-0">
-                        <h4 class="d-inline-block">Boolean</h4>
+                        <h3 class="d-inline-block">Boolean</h3>
                         <a href="#"><span class="badge rounded-pill text-bg-blue">Piano blaze</span></a>
-                        <ul class="mb-4 mb-lg-0 mt-lg-2">
+                        <ul class="mb-4 mb-lg-0 mt-2">
                             <li class="mb-lg-0">
                                 <a href="#"><span class="badge rounded-pill text-bg-blue">3 app</span></a>
                                 <i class="fa-solid fa-angles-right"></i>
-                                <a href="#"><span class="badge my-rounded-pill text-bg-blue"><i
+                                <a class="d-lg-none" href="#"><span class="badge my-rounded-pill text-bg-blue"><i
                                             class="fa-solid fa-plus fa-xs"></i></span></a>
+                                <a class="d-none d-lg-inline-block" href="#"><span
+                                        class="badge rounded-pill text-bg-blue">Boolean mobile app</span></a>
+                                <a class="d-none d-lg-inline-block" href="#"><span
+                                        class="badge rounded-pill text-bg-blue">Boolean web app</span></a>
+                                <a class="d-none d-lg-inline-block" href="#"><span
+                                        class="badge rounded-pill text-bg-blue">Boolean blog app</span></a>
                             </li>
                         </ul>
                     </li>
@@ -242,47 +248,155 @@
 
 
             <!--todo Content-Main -->
-            <div class="content-main container-fluid bg-color-lightgrey py-4">
+
+            <div class="content-main bg-color-lightgrey py-4 px-3">
                 <div class="row gy-4">
                     <div class="col-12 col-lg-8 order-lg-1">
-                        <div class="card">
+                        <div class="card mb-4">
                             <div class="card-header">
                                 <h2>Prossime Classi</h2>
                             </div>
-                            <table class="table table-hover container-table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Nome</th>
-                                        <th scope="col">Data Inizio</th>
-                                        <th scope="col">ROI</th>
-                                        <th scope="col">Stato</th>
-                                        <th scope="col">Azioni</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row"><img class="tag-image"
-                                                src="../html-css-bootstrap-dashboard/bootstrap_dashboard/img/class-avatar.jpg"
-                                                alt="">
+                            <div class="card-body">
 
-                                            <a href="#">Classe 75</a>
-                                        </th>
-                                        <td><a href="#">15 Feb 2023</a></td>
-                                        <td><a href="#">20%</a></td>
-                                        <td><a href="#"><span class="badge text-bg-success">Done</span></a></td>
-                                        <td>
-                                            <a href="#"><i class="fa-solid fa-pen rounded"></i></a>
-                                            <a href="#"><i class="fa-solid fa-trash rounded"></i></a>
-                                        </td>
-                                    </tr>
+                                <table class="table table-hover text-center">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Nome</th>
+                                            <th scope="col">Data Inizio</th>
+                                            <th scope="col">ROI</th>
+                                            <th scope="col">Stato</th>
+                                            <th scope="col">Azioni</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row"><img class="tag-image"
+                                                    src="../html-css-bootstrap-dashboard/bootstrap_dashboard/img/class-avatar.jpg"
+                                                    alt="">
 
-                                </tbody>
-                            </table>
+                                                <a href="#">Classe 116</a>
+                                            </th>
+                                            <td><a href="#">8 Nov 2023</a></td>
+                                            <td><a href="#">20%</a></td>
+                                            <td><a href="#"><span class="badge text-bg-success">Done</span></a></td>
+                                            <td>
+                                                <a href="#"><i class="fa-solid fa-pen rounded"></i></a>
+                                                <a href="#"><i class="fa-solid fa-trash rounded"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><img class="tag-image"
+                                                    src="../html-css-bootstrap-dashboard/bootstrap_dashboard/img/class-avatar.jpg"
+                                                    alt="">
+
+                                                <a href="#">Classe 116</a>
+                                            </th>
+                                            <td><a href="#">8 Nov 2023</a></td>
+                                            <td><a href="#">20%</a></td>
+                                            <td><a href="#"><span class="badge text-bg-success">Done</span></a></td>
+                                            <td>
+                                                <a href="#"><i class="fa-solid fa-pen rounded"></i></a>
+                                                <a href="#"><i class="fa-solid fa-trash rounded"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><img class="tag-image"
+                                                    src="../html-css-bootstrap-dashboard/bootstrap_dashboard/img/class-avatar.jpg"
+                                                    alt="">
+
+                                                <a href="#">Classe 116</a>
+                                            </th>
+                                            <td><a href="#">8 Nov 2023</a></td>
+                                            <td><a href="#">20%</a></td>
+                                            <td><a href="#"><span
+                                                        class="badge text-bg-warning text-white">process</span></a></td>
+                                            <td>
+                                                <a href="#"><i class="fa-solid fa-pen rounded"></i></a>
+                                                <a href="#"><i class="fa-solid fa-trash rounded"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><img class="tag-image"
+                                                    src="../html-css-bootstrap-dashboard/bootstrap_dashboard/img/class-avatar.jpg"
+                                                    alt="">
+
+                                                <a href="#">Classe 116</a>
+                                            </th>
+                                            <td><a href="#">8 Nov 2023</a></td>
+                                            <td><a href="#">20%</a></td>
+                                            <td><a href="#"><span class="badge text-bg-success">Done</span></a></td>
+                                            <td>
+                                                <a href="#"><i class="fa-solid fa-pen rounded"></i></a>
+                                                <a href="#"><i class="fa-solid fa-trash rounded"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><img class="tag-image"
+                                                    src="../html-css-bootstrap-dashboard/bootstrap_dashboard/img/class-avatar.jpg"
+                                                    alt="">
+
+                                                <a href="#">Classe 116</a>
+                                            </th>
+                                            <td><a href="#">8 Nov 2023</a></td>
+                                            <td><a href="#">20%</a></td>
+                                            <td><a href="#"><span class="badge text-bg-danger">Failed</span></a></td>
+                                            <td>
+                                                <a href="#"><i class="fa-solid fa-pen rounded"></i></a>
+                                                <a href="#"><i class="fa-solid fa-trash rounded"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><img class="tag-image"
+                                                    src="../html-css-bootstrap-dashboard/bootstrap_dashboard/img/class-avatar.jpg"
+                                                    alt="">
+
+                                                <a href="#">Classe 116</a>
+                                            </th>
+                                            <td><a href="#">8 Nov 2023</a></td>
+                                            <td><a href="#">20%</a></td>
+                                            <td><a href="#"><span class="badge text-bg-success">Done</span></a></td>
+                                            <td>
+                                                <a href="#"><i class="fa-solid fa-pen rounded"></i></a>
+                                                <a href="#"><i class="fa-solid fa-trash rounded"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><img class="tag-image"
+                                                    src="../html-css-bootstrap-dashboard/bootstrap_dashboard/img/class-avatar.jpg"
+                                                    alt="">
+
+                                                <a href="#">Classe 116</a>
+                                            </th>
+                                            <td><a href="#">8 Nov 2023</a></td>
+                                            <td><a href="#">20%</a></td>
+                                            <td><a href="#"><span class="badge text-bg-danger">Failed</span></a></td>
+                                            <td>
+                                                <a href="#"><i class="fa-solid fa-pen rounded"></i></a>
+                                                <a href="#"><i class="fa-solid fa-trash rounded"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><img class="tag-image"
+                                                    src="../html-css-bootstrap-dashboard/bootstrap_dashboard/img/class-avatar.jpg"
+                                                    alt="">
+
+                                                <a href="#">Classe 116</a>
+                                            </th>
+                                            <td><a href="#">8 Nov 2023</a></td>
+                                            <td><a href="#">20%</a></td>
+                                            <td><a href="#"><span class="badge text-bg-success">Done</span></a></td>
+                                            <td>
+                                                <a href="#"><i class="fa-solid fa-pen rounded"></i></a>
+                                                <a href="#"><i class="fa-solid fa-trash rounded"></i></a>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
                         </div>
-                    </div>
 
-                    <!--todo Faq -->
-                    <div class="col-12 order-lg-3">
                         <div class="card">
                             <div class="card-header">
                                 <h2 class="text-uppercase">f.a.q</h2>
@@ -296,7 +410,7 @@
                                             Come aggiungere un nuovo studente?
                                         </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                    <div id="collapseOne" class="accordion-collapse collapse"
                                         data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <p>Clicca sul + in alto nella sezione blu.</p>
@@ -338,6 +452,7 @@
                             </div>
                         </div>
                     </div>
+
 
 
                     <!--todo Todo -->

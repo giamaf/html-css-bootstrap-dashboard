@@ -17,6 +17,7 @@ ul {
     margin: 0;
 }
 
+h3,
 h4,
 h5,
 h6 {
@@ -209,6 +210,29 @@ th a {
     margin-left: 0.5rem;
 }
 
+th:first-of-type {
+    text-align: start;
+}
+
+th:not(:first-of-type) {
+    width: 110px;
+}
+
+th:nth-of-type(2) {
+    display: none;
+}
+
+td:first-of-type {
+    display: none;
+}
+
+th:nth-of-type(3) {
+    display: none;
+}
+
+td:nth-of-type(2) {
+    display: none;
+}
 
 /*todo Faq */
 .accordion-body p {
