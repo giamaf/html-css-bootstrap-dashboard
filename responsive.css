@@ -1,11 +1,11 @@
 /***** SIDEBAR WIDTH LG-SCREEN *****/
 @media screen and (min-width: 991px) {
     .sidebar {
-        flex-basis: 130px;
+        flex-basis: 140px;
     }
 
     .sidebar .fa-solid {
-        font-size: 1.3rem
+        font-size: 1.2rem;
     }
 }
 

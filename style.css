@@ -141,7 +141,7 @@ main .fa-solid {
 }
 
 .sidebar .fa-solid {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 .sidebar-top ul li {
@@ -237,4 +237,14 @@ td:nth-of-type(2) {
 /*todo Faq */
 .accordion-body p {
     font-weight: 500;
+}
+
+
+/***** EFFECTS *****/
+.sidebar-top ul li:hover a {
+    filter: contrast(0);
+}
+
+.sidebar-bottom:hover a {
+    filter: contrast(0);
 }
